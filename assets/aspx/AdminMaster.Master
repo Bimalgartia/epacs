@@ -1,0 +1,193 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMaster.master.cs" Inherits="PACS.assets.aspx.AdminMaster" %>
+<!DOCTYPE html>
+<html>
+<head runat="server">
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>e-PACS</title>
+  <meta content="" name="description"/>
+  <meta content="" name="keywords"/>
+  <link href="../img/co-logo.png" rel="icon"/>
+  <link href="../img/co-logo.png" rel="apple-touch-icon"/>
+  <link href="../css/Master.css" rel="stylesheet" />
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+  <script language="javascript" src="../JS/Validation.js"  type="text/javascript"></script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet"/>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+   <!--wrapper start-->
+<div class="wrapper">
+<!--header menu start-->
+		<div class="header">
+			<div class="header-menu">
+						<div class="title-menu">
+							<a><asp:Label ID="Label4" runat="server" Text="Label"></asp:Label></a>
+							<a><asp:Label ID="Label5" runat="server" Text="Label"></asp:Label></a>
+							<a><asp:Label ID="Label6" runat="server" Text="Label"></asp:Label></a></div>	
+		    <div class="title">
+						    <a><asp:Label ID="Label7" runat="server"></asp:Label></a>
+							<asp:Label ID="Label8" runat="server"></asp:Label></div>
+			<div class="sidebar-btn">
+							<i class="fas fa-bars"></i>	</div>
+					<ul>
+						<li>
+							
+							<div class="wrappers">
+								<body onload="initClock()">
+      <!--digital clock start-->
+	<asp:Label ID="Label3" runat="server" class="username"></asp:Label>
+    <div class="datetime">
+      <div class="date">
+        <span id="dayname">Day</span>,
+        <span id="month">Month</span>
+        <span id="daynum">00</span>,
+        <span id="year">Year</span>
+      </div>
+      <div class="time">
+        <span id="hour">00</span>:
+        <span id="minutes">00</span>:
+        <span id="seconds">00</span>
+        <span id="period">AM</span>
+      </div>
+    </div></div>
+    <!--digital clock end-->
+
+    <script type="text/javascript">
+        function updateClock() {
+            var now = new Date();
+            var dname = now.getDay(),
+                mo = now.getMonth(),
+                dnum = now.getDate(),
+                yr = now.getFullYear(),
+                hou = now.getHours(),
+                min = now.getMinutes(),
+                sec = now.getSeconds(),
+                pe = "AM";
+
+            if (hou >= 12) {
+                pe = "PM";
+            }
+            if (hou == 0) {
+                hou = 12;
+            }
+            if (hou > 12) {
+                hou = hou - 12;
+            }
+
+            Number.prototype.pad = function (digits) {
+                for (var n = this.toString(); n.length < digits; n = 0 + n);
+                return n;
+            }
+
+            var months = ["January", "February", "March", "April", "May", "June", "July", "Augest", "September", "October", "November", "December"];
+            var week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            var ids = ["dayname", "month", "daynum", "year", "hour", "minutes", "seconds", "period"];
+            var values = [week[dname], months[mo], dnum.pad(2), yr, hou.pad(2), min.pad(2), sec.pad(2), pe];
+            for (var i = 0; i < ids.length; i++)
+                document.getElementById(ids[i]).firstChild.nodeValue = values[i];
+        }
+
+        function initClock() {
+            updateClock();
+            window.setInterval("updateClock()", 1);
+        }
+    </script>
+						</li>
+						<li><a href="#"><i class="fas fa-bell"></i></a></li>
+						<li><a href="Password.aspx"><i class="fas fa-cog"></i></a></li>
+						<li><a href="../../Index.aspx"><i class="fas fa-power-off"></i></a></li>
+					</ul>
+				</div>
+			</div>
+
+			<!--header menu end-->
+			<!--sidebar start-->
+			<div class="sidebar">
+				<div class="sidebar-menu">
+					<center class="profile">
+                        <img src="../img/testimonials/PacsLogo3.png" />
+						<a><asp:Label ID="Label2" runat="server"></asp:Label></a>
+						<p></p>
+					</center>
+					<li class="item">
+						<a href="MainPenal.aspx" class="menu-btn">
+							<i class="fas fa-desktop"></i><asp:Label ID="Label1" runat="server"></asp:Label></a>							
+					</li>
+					<li class="item" id="profile">
+						<a href="#profile" class="menu-btn">
+							<i class="fas fa-user-circle"></i><span>IMPORT DATA<i class="fas fa-chevron-down drop-down"></i></span></a>
+							<div class="sub-menu">
+							<a href="#"><i class="fas fa-image"></i><span>Import Membership Data</span></a>
+							<a href="#"><i class="fas fa-image"></i><span>Import Saving Data</span></a>
+							<a href="#"><i class="fas fa-image"></i><span>Edit Member's Data</span></a>
+							</div></li>
+
+					<li class="item" id="messages">
+						<a href="#messages" class="menu-btn">
+							<i class="fas fa-envelope"></i><span>MEMBERSHIP <i class="fas fa-chevron-down drop-down"></i></span>
+						</a>
+						<div class="sub-menu">
+							<a href="AddMember.aspx"><i class="fas fa-envelope"></i><span>New Member</span></a>
+							<a href="ViewMembers.aspx"><i class="fas fa-envelope-square"></i><span>View Member</span></a>
+							<a href="#"><i class="fas fa-envelope"></i><span>...</span></a>							
+							</div></li>
+					<li class="item" id="Transation">
+						<a href="#Transation" class="menu-btn">
+							<i class="fas fa-user-circle"></i><span>LAND MAINTAIN<i class="fas fa-chevron-down drop-down"></i></span></a>
+							<div class="sub-menu">
+							<a href="LandStatus.aspx"><i class="fas fa-image"></i><span>New Land Registration</span></a>
+							<a href="#"><i class="fas fa-image"></i><span>View Land Details</span></a>
+							<a href="#"><i class="fas fa-image"></i><span>Edit Land Details</span></a>
+							</div></li>
+
+					<li class="item" id="LandDetails">
+						<a href="#LandDetails" class="menu-btn">
+							<i class="fas fa-envelope"></i><span>All REPORTS<i class="fas fa-chevron-down drop-down"></i></span>
+						</a>
+						<div class="sub-menu">
+							<a href="#"><i class="fas fa-envelope-square"></i><span>Member's List </span></a>
+							<a href="#"><i class="fas fa-envelope-square"></i><span>Sent</span></a>
+							<a href="#"><i class="fas fa-exclamation-circle"></i><span>Spam</span></a>
+						</div>
+					</li>
+					<li class="item" id="Settings">
+						<a href="#Settings" class="menu-btn"><i class="fas fa-cog"></i><span>UPDATE <i class="fas fa-chevron-down drop-down"></i></span></a>
+						<div class="sub-menu">
+							<a href="#"><i class="fas fa-lock"></i><span>KYC Update</span></a>
+							<a href="#"><i class="fas fa-language"></i><span>Language</span></a>
+						</div>
+					</li>
+					<li class="item">
+						<a href="#" class="menu-btn">
+							<i class="fas fa-info-circle"></i><span>About</span>
+						</a>
+					</li>
+				</div>
+			</div>
+			<!--sidebar end-->
+			<!--main container start-->
+			<div class="main-container">				
+				<div>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+				</div>
+				<div>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder>
+				</div>
+			</div>
+			<!--main container end-->
+		</div>
+		<!--wrapper end-->
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$(".sidebar-btn").click(function(){
+				$(".wrapper").toggleClass("collapse");
+			});
+		});
+        </script>
+	</body>
+</html>

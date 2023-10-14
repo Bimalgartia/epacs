@@ -1,0 +1,79 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+.Back {
+    height: 1000px;
+    width: 100%;
+    margin-left: 0px;
+    background-image: url('../img/testimonials/git back.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+.Back .Work .title{
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 65px;
+    color: #ffbb38;
+    font-family: "Poppins", sans-serif;
+    text-shadow: 1px 1px 2px #000000;
+}
+.Work {
+    position: relative;
+    width: 80%;
+    top: 5%;
+    left: 10%;
+    align-items: center;
+    background-color: antiquewhite;
+    border-radius: 20px;
+    box-shadow: 5px 4px 22px 8px #000000;
+    padding: 1%;
+    text-align: center;
+}
+.Back .Work .fields {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.Back .Work .fields .input-field {    
+    display:flex;
+    width: calc(100% / 3 - 15px);
+    flex-direction: column;
+    margin: 4px 0;
+    color:Green;
+    text-align:left;
+    font-weight: 600;
+}
+.input-field input, select {
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    height: 35px;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 15px;
+    margin: 8px 0;
+}
+.Back .Work .fields .input-field .Submit {
+    color: blue;
+    background: #ffbb38;
+    border-radius: 4px;
+    padding: 7px 25px 8px 25px;
+    box-shadow: 1px 2px 5px 2px #000000;
+    white-space: nowrap;
+    transition: 0.3s;
+    font-size: 14px;
+    display: inline-block;
+    border: 2px solid #ffc451;
+}
+.Back .Work .fields .input-field .Submit:hover {
+    background: Green;
+    color: #ffbb38;
+}
+.Penal2 {display:block;}

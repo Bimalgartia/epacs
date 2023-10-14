@@ -1,0 +1,139 @@
+﻿.Fullpage {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(1.5em 6.28571em at 1.95em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 0 0, radial-gradient(1.5em 6.28571em at -0.45em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 1.5em 5.5em, radial-gradient(2.3em 4.57143em at 2.99em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 55%, rgba(255, 255, 255, 0) 55%) 0 0, radial-gradient(2.3em 4.57143em at -0.69em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 55%, rgba(255, 255, 255, 0) 55%) 2.3em 4em, radial-gradient(3.5em 6.28571em at 4.55em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 0 0, radial-gradient(3.5em 6.28571em at -1.05em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 3.5em 5.5em, radial-gradient(#15ffa5, #00ced1);
+    background-color: mediumspringgreen;
+    background-size: 1.5em 11em, 1.5em 11em, 2.3em 8em, 2.3em 8em, 3.5em 11em, 3.5em 11em, 100% 100%;
+    background-repeat: repeat;
+    height: 100%;
+    overflow-y: auto;
+    padding: 0px;
+    transition: 0.3s;
+    border: 1px blue;
+}
+
+.auto-style1 {
+    text-align: center;
+    align-items:center;
+    background-color: none;
+    margin-left: 00%;
+    width: 203mm;
+    height: 280mm;
+}
+
+.heading {
+    height: 20mm;
+    background-color: none;
+    border-bottom: 3px solid blueviolet;
+}
+
+.Datasheet {
+    height: 240mm;
+    border-bottom: 3px solid green;
+}
+
+.footer {
+    height: 20mm;
+    background-color: none;
+    border-bottom: 3px solid green;
+}
+
+.auto-style1 .heading .headingleft {
+    float: left;
+    width: 49%;
+    height: 20mm;
+}
+.auto-style1 .heading .headingleft .headerlogo {
+    width: 90%;
+    height: 90%;
+    color:blueviolet;
+}
+
+.auto-style1 .heading .headingright {
+    float: right;
+    width: 49%;
+    height: 20mm;
+    font-family: Arial Rounded MT;
+    font-size: 150%;
+    text-align: center;
+    line-height: 1.5;
+    color: black;
+}
+
+.auto-style1 .Datasheet .Membersign {
+    height: 240mm;
+    width: 40%;
+    float: Right;
+}
+
+.auto-style1 .Datasheet .Memberbasic {
+    height: 240mm;
+    width: 60%;
+    float: left;
+}
+
+    .auto-style1 .Datasheet .Memberbasic .Memberdetail {
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 40px;
+        border: 2px solid Coral;
+        border-radius: 10px;
+        padding: 10px;
+        font-family: Arial;
+        text-align: left;
+        line-height: 1.5;
+    }
+
+        .auto-style1 .Datasheet .Memberbasic .Memberdetail .menu {
+            margin-top: -25px;
+            background-color: coral;
+            color: white;
+            border: 1px coral;
+            border-radius: 5px;
+            font-family: Arial Rounded MT;
+            text-align: center;
+        }
+
+.auto-style1 .Datasheet .Membersign .Photo {
+    height: 70mm;
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 40px;
+    border: 2px solid blue;
+    border-radius: 10px;
+    background-image: url('../Images/SampleImage.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.auto-style1 .Datasheet .Membersign .Memonumber {
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 10px;
+    border: 2px solid blue;
+    border-radius: 5px;
+    color: white;
+    background-color: blue;
+    font-family: Arial;
+    text-align: center;
+    font-weight: bold;
+}
+
+.auto-style1 .footer .footerleft {
+    float: left;
+    width: 50%;
+    height: 20mm;
+    text-align: left;
+    line-height: 1.5;
+    padding-left: 15px;
+    font-family: Arial;
+}
+
+.auto-style1 .footer .footerright {
+    float: left;
+    width: 50%;
+    height: 20mm;
+}

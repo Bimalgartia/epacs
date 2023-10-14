@@ -1,0 +1,31 @@
+Javascripting Coding
+------------------
+
+<script src="jsfiles/html2canvas.min.js"></script>
+    <script src="jsfiles/pdfmake.min.js"></script>
+    <script type="text/javascript">
+        function Export() {
+            alert("hello");
+            html2canvas(document.getElementById('admitcard'), {
+                onrendered: function (canvas) {
+                    var data = canvas.toDataURL();
+                    var docDefinition = {
+                        content: [{
+                            image: data,
+                            width: 500
+                        }]
+                    };
+                    pdfMake.createPdf(docDefinition).download("AdmitCard.pdf");
+                    alert("Admit Card Downloading Started");
+                }
+            });
+        }
+    </script>
+
+
+---------------
+
+<input type="button" id="btnExport" value="Export" onclick="Export()" class="auto-style5" />
+
+
+---------------
